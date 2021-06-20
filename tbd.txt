@@ -1,0 +1,199 @@
+local Finity = loadstring(game:HttpGet("https://pastebin.com/raw/y4eeFHp0"))()
+local FinityWindow = Finity.new(true, "TBD 0.1 | KeypadZero to open UI") -- 'true' means dark mode is enabled
+FinityWindow.ChangeToggleKey(Enum.KeyCode.KeypadZero)
+
+
+
+-- Functions
+
+
+ --loadstring(game:HttpGet("https://pastebin.com/raw/Acf4Teen"))()
+----------------
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+-------------------------
+local Bindable = Instance.new("BindableFunction")
+local StaterGui = game:GetService("StarterGui")
+ 
+function Bindable.OnInvoke(response)
+    if response == "Leave Game" then
+        game.Players.LocalPlayer:Kick("Moderator Was In Your Game")
+    elseif response == "Ignore" then
+        return
+    end
+end
+ 
+for i,v in pairs(game.Players:GetPlayers()) do
+    if v.Name == "Taahmi" or v.Name == "stahbytbdaltLOL" or v.Name == "stahby" or v.Name == "Nekurya" or v.Name == "thiari" or v.Name == "JamKohai" or v.Name == "Akuryone" or v.Name == "yourladnoobie" or v.Name == "GoatedAyzSummon" or v.Name == "AyeeImNotKohai" then
+        StaterGui:SetCore("SendNotification",{
+        Title = "Moderator Notification",
+        Text = "Moderator Is in your Game: "..v.Name,
+        Duration = 9e9,
+        Callback = Bindable,
+        Button1 = "Ignore",
+        Button2 = "Leave Game"
+        })
+    end
+end
+ 
+game.Players.PlayerAdded:Connect(function(v)
+    if v.Name == "Taahmi" or v.Name == "stahbytbdaltLOL" or v.Name == "stahby" or v.Name == "Nekurya" or v.Name == "thiari" or v.Name == "JamKohai" or v.Name == "Akuryone" or v.Name == "yourladnoobie" or v.Name == "GoatedAyzSummon" or v.Name == "AyeeImNotKohai" then
+        StaterGui:SetCore("SendNotification",{
+        Title = "Moderator Notification",
+        Text = "Moderator Is in your Game: "..v.Name,
+        Duration = 9e9,
+        Callback = Bindable,
+        Button1 = "Ignore",
+        Button2 = "Leave Game"
+        })
+    end
+end)
+
+-------------------------
+-- Categories
+--local MainCategory = FinityWindow:Category("Main")
+local TeleportCategory = FinityWindow:Category("Teleport")
+local MiscCategory = FinityWindow:Category("Misc")
+
+
+
+-- Player Sectors
+--local MainSettings = MainCategory:Sector("Main")
+local MiscSettings = MiscCategory:Sector("Misc")
+--local Automation = MainCategory:Sector("Automation")
+local TeleportSettings = TeleportCategory:Sector("Trainers")
+local MiscTeleportSettings = TeleportCategory:Sector("Misc Teleport")
+
+
+
+
+
+-------Variables
+---------------------------------------------
+TeleportSettings:Cheat("Dropdown", "Super Trainer Teleport", function(tp)
+if tp == "Assassin" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-304.28006, 188.093781, 372.787903)
+    elseif tp == "Sigil Knight" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1954.29199, 308.600006, -829.255554)
+    elseif tp == "Church Knight" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6782.18701, 560.800598, -1740.77271)
+    elseif tp == "Dragon Knight" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3087.30127, 121.368164, -2499.22119)
+    elseif tp == "Spy" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1206.91089, 678.987183, 2638.54419)
+    elseif tp == "Monk" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1306.30127, 434.092834, 293.966553)
+    elseif tp == "Akuma" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3045.39185, 439.754303, 800.00824)
+    elseif tp == "Super Illu" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-420.746918, 270.5, 1048.06677)
+    elseif tp == "Botanist" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3187.77808, 142.368164, -2438.86157)
+
+  end
+end,
+{
+options = {
+    "Assassin",
+    "Sigil Knight",
+    "Church Knight",
+    "Dragon Knight",
+    "Spy",
+    "Monk",
+    "Akuma",
+    "Super Illu",
+    "Botanist"
+    
+    }
+    })
+---------------------------------------------
+TeleportSettings:Cheat("Dropdown", "Ultra Trainer Teleport", function(tp)
+if tp == "Faceless" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6593.90137, 656.799133, -862.464478)
+    elseif tp == "Shinobi" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(735.640503, 125.710083, -4666.896)
+    elseif tp == "Ultra Sigil" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6851.146, 1411.49353, -160.186157)
+    elseif tp == "Dark Sigil" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1875.05322, -517.754822, -5439.5)
+    elseif tp == "Deep Knight" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6782.18701, 560.800598, -1740.77271)
+    elseif tp == "Dslayer" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1132.35083, 3784.13989, 228.521072)
+    elseif tp == "Ultra Spy" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1206.91089, 678.987183, 2638.54419)
+    elseif tp == "Dsage" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5847.29248, 1299.29395, -676.049377)
+    elseif tp == "Oni" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5458.59326, 784.794067, -1196.43103)
+    elseif tp == "Master Illu" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6091.5835, 1416.49414, 127.194588)
+    elseif tp == "Druid" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1888.50012, 239, 1565.00012)
+
+  end
+end,
+{
+options = {
+    "Faceless",
+    "Shinobi",
+    "Ultra Sigil",
+    "Dark Sigil",
+    "Deep Knight",
+    "Dslayer",
+    "Ultra Spy",
+    "Dsage",
+    "Oni",
+    "Master Illu",
+    "Druid"
+    
+    }
+    })
+
+---------------------------------------------
+
+MiscTeleportSettings:Cheat("Dropdown", "Misc Teleport", function(tp)
+        if tp == "Warrior" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1801.47375, 315.653778, -226.704666)
+        elseif tp == "Thief" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2027.30627, 611.985596, -678.139648)
+   elseif tp == "Pit Fighter" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6851.146, 1411.49353, -160.186157)
+    elseif tp == "Engineer" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1832.448, 315.09375, -240.782364)
+    elseif tp == "Merchant" then
+       	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2804.88794, 287.750061, 50.2727127)
+       	end
+end,
+{
+options = {
+    "Warrior",
+    "Thief",
+    "Pit Fighter",
+    "Engineer",
+    "Merchant"
+    
+    }
+    })
+---------------------------------------------
+MiscTeleportSettings:Cheat("Button", "Skycastle", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1007.5631103516, 3783.1398925781, 202.21286010742)
+end, {text = "Teleport"})
+MiscTeleportSettings:Cheat("Button", "Sigil Helm", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6178.2124023438, 1344.2935791016, 168.46331787109)
+end, {text = "Teleport"})
+MiscTeleportSettings:Cheat("Button", "CR Loot Room", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5790.90771, 416.422577, 638.925293, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end, {text = "Teleport"})
+
+
+--------------------------------
+MiscSettings:Cheat("Button", "Destroy Gui", function()
+game.CoreGui:FindFirstChild("FinityUI"):Destroy()
+end, {text = "Destroy Gui"})
+    
+    
